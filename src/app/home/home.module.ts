@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ContribuicaoMensalComponent } from './components/contribuicao-mensal/contribuicao-mensal.component';
 import { ContribuicaoVoluntariaComponent } from './components/contribuicao-voluntaria/contribuicao-voluntaria.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { ButtonModule } from 'primeng/button';
+import { SharedModule } from '../shared/shared.module';
+import { CardModule } from 'primeng/card';
 
 
 @NgModule({
@@ -15,10 +16,11 @@ import { ButtonModule } from 'primeng/button';
     ContribuicaoVoluntariaComponent,
   ],
   imports: [
-    CommonModule,
     RouterModule,
     HomeRoutingModule,
-    ButtonModule
+    SharedModule,
+    ButtonModule,
+    CardModule,
   ],
   exports: [
     ContribuicaoMensalComponent,

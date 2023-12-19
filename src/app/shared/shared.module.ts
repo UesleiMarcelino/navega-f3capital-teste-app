@@ -6,9 +6,11 @@ import { SubheaderMenuComponent } from './subheader-menu/subheader-menu.componen
 import { SidenavMenuComponent } from './sidenav-menu/sidenav-menu.component';
 import { ChartsComponent } from './charts/charts.component';
 import { RouterModule } from '@angular/router';
+
 import { ButtonModule } from 'primeng/button';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CardModule } from 'primeng/card';
+import { MenubarModule } from 'primeng/menubar';
+import { DropdownModule } from 'primeng/dropdown';
 
 
 
@@ -21,11 +23,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ChartsComponent,
   ],
   imports: [
-    CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
     RouterModule,
-    ButtonModule
+    ButtonModule,
+    CardModule,
+    MenubarModule,
+    DropdownModule
   ],
   exports: [
     HeaderComponent,
