@@ -3,9 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
 
-import { ContribuicaoMensalComponent } from './home/components/contribuicao-mensal/contribuicao-mensal.component';
-import { ContribuicaoVoluntariaComponent } from './home/components/contribuicao-voluntaria/contribuicao-voluntaria.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +12,9 @@ import { ContribuicaoVoluntariaComponent } from './home/components/contribuicao-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

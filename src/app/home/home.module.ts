@@ -5,7 +5,7 @@ import { ContribuicaoVoluntariaComponent } from './components/contribuicao-volun
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
-
+import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
@@ -17,7 +17,8 @@ import { HomeRoutingModule } from './home-routing.module';
   imports: [
     CommonModule,
     RouterModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ButtonModule
   ],
   exports: [
     ContribuicaoMensalComponent,
