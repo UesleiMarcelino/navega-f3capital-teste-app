@@ -5,6 +5,10 @@ import { ContribuicaoVoluntariaComponent } from '../components/contribuicao-volu
 import { ChartsComponent } from 'src/app/home/components/charts/charts.component';
 import { RouterModule } from '@angular/router';
 
+import { ChartModule } from 'primeng/chart';
+import { PanelModule } from 'primeng/panel';
+
+
 
 @NgModule({
   declarations: [
@@ -14,7 +18,9 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ChartModule,
+    PanelModule
   ],
   exports: [
     ChartsComponent,
