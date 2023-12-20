@@ -4,7 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { SubheaderMenuComponent } from './subheader-menu/subheader-menu.component';
 import { SidenavMenuComponent } from './sidenav-menu/sidenav-menu.component';
-import { ChartsComponent } from './charts/charts.component';
+import { ChartsComponent } from '../home/components/charts/charts.component';
 import { RouterModule } from '@angular/router';
 
 import { ButtonModule } from 'primeng/button';
@@ -20,7 +20,6 @@ import { DropdownModule } from 'primeng/dropdown';
     LoginComponent,
     SubheaderMenuComponent,
     SidenavMenuComponent,
-    ChartsComponent,
   ],
   imports: [
     RouterModule,
@@ -34,7 +33,6 @@ import { DropdownModule } from 'primeng/dropdown';
     LoginComponent,
     SubheaderMenuComponent,
     SidenavMenuComponent,
-    ChartsComponent,
   ],
 })
 export class SharedModule { }

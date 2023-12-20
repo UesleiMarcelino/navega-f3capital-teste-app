@@ -7,24 +7,23 @@ import { HomeRoutingModule } from './home-routing.module';
 import { ButtonModule } from 'primeng/button';
 import { SharedModule } from '../shared/shared.module';
 import { CardModule } from 'primeng/card';
+import { ContentComponent } from './content/content.component';
+import { ContentModule } from './content/content.module';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ContribuicaoMensalComponent,
-    ContribuicaoVoluntariaComponent,
+    ContentComponent,
   ],
   imports: [
     RouterModule,
     HomeRoutingModule,
     SharedModule,
+    ContentModule,
     ButtonModule,
     CardModule,
   ],
-  exports: [
-    ContribuicaoMensalComponent,
-    ContribuicaoVoluntariaComponent
-  ]
+
 })
 export class HomeModule { }
