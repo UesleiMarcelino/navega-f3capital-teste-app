@@ -7,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartsComponent implements OnInit {
 basicData: any
+numMonth: any
+numVolunt: any
+
 
   ngOnInit(): void {
+    this.numMonth = Math.floor( Math.random()* 100000) + 1000;
+    this.numVolunt = Math.floor( Math.random()* 100000) + 1000;
     this.basicData = {
-      labels: ['Q1', 'Q2'],
       datasets : [{
-        data: [10 , 20],
+        data: [this.numMonth , this.numVolunt],
         backgroundColor: [
           "#E22E6F",
           "#594CBE",
@@ -23,6 +27,10 @@ basicData: any
     ]
       }]
     }
+  }
+
+  generateNumberMonth() {
+   
   }
 
 }

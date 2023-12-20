@@ -8,6 +8,7 @@ import { CardModule } from 'primeng/card';
 import { DividerModule } from 'primeng/divider';
 import { ContentComponent } from './content/content.component';
 import { ContentModule } from './content/content.module';
+import { PanelModule } from 'primeng/panel';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ContentModule } from './content/content.module';
     ContentModule,
     ButtonModule,
     CardModule,
+    PanelModule
   ],
 
 })

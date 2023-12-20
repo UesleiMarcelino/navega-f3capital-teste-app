@@ -6,11 +6,15 @@ import { SubheaderMenuComponent } from './subheader-menu/subheader-menu.componen
 import { SidenavMenuComponent } from './sidenav-menu/sidenav-menu.component';
 import { ChartsComponent } from '../home/components/charts/charts.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { MenubarModule } from 'primeng/menubar';
 import { DropdownModule } from 'primeng/dropdown';
+import { MessagesModule } from 'primeng/messages';
+import { PasswordModule } from 'primeng/password';
+import { PanelModule } from 'primeng/panel';
 
 
 
@@ -23,10 +27,15 @@ import { DropdownModule } from 'primeng/dropdown';
   ],
   imports: [
     RouterModule,
+    CommonModule,
+    ReactiveFormsModule,
     ButtonModule,
     CardModule,
     MenubarModule,
-    DropdownModule
+    DropdownModule,
+    MessagesModule,
+    PasswordModule,
+    PanelModule
   ],
   exports: [
     HeaderComponent,

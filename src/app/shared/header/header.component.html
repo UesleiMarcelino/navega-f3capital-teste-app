@@ -1,8 +1,11 @@
-<p-menubar [style]="{'background-color': 'bg-menu-color'}">
+<p-menubar class="hidden md:block " [style]="{'background-color': 'bg-menu-color'}">
   <ng-template pTemplate="start">
-      <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
+      <img src="/assets/img/avatar.png"  class="ml-8" />
   </ng-template>
   <ng-template pTemplate="end">
-      <input type="text" pInputText placeholder="Search" class="w-full" />
+    
+    <i class="pi pi-home mr-2 icon-header"></i>
+    <i class="pi pi-eye mr-2 icon-header"></i>
+    <i class="pi pi-sync mr-8 icon-header"></i>
   </ng-template>
 </p-menubar>
