@@ -7,6 +7,9 @@ import { RouterModule } from '@angular/router';
 
 import { ChartModule } from 'primeng/chart';
 import { PanelModule } from 'primeng/panel';
+import { ButtonModule } from 'primeng/button';
+import { ButtonAddContribuicaoComponent } from '../components/button-add-contribuicao/button-add-contribuicao.component';
+
 
 
 
@@ -14,18 +17,21 @@ import { PanelModule } from 'primeng/panel';
   declarations: [
     ChartsComponent,
     ContribuicaoMensalComponent,
-    ContribuicaoVoluntariaComponent
+    ContribuicaoVoluntariaComponent,
+    ButtonAddContribuicaoComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     ChartModule,
-    PanelModule
+    PanelModule,
+    ButtonModule
   ],
   exports: [
     ChartsComponent,
     ContribuicaoMensalComponent,
-    ContribuicaoVoluntariaComponent
+    ContribuicaoVoluntariaComponent,
+    ButtonAddContribuicaoComponent
   ]
 })
 export class ContentModule { }

@@ -1,6 +1,24 @@
-<p-panel header="Header">
-  <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
+<p-panel [style]="{ width: '750px' }">
+  <ng-template pTemplate="header">
+    <div class="flex align-items-center gap-2">
+      <img alt=" icon" src="/assets/icons/currency.png">
+      <span class="font-medium">Contribuição Mensal</span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="icons">
+    <span class="pi pi-angle-right icon-menu"></span>
+  </ng-template>
+  <div class="grid">
+    <div class="col-12">
+      <span class="font-medium">Valor da contribuição</span>
+      <span class="font-bold col-offset-7">R$ 500,00</span>
+    </div>
+    <div class="col-12">
+      <span class="font-medium">Porcentagem do salário</span>
+      <span class="font-bold col-offset-7">5%</span>
+    </div>
+    <div class="col-12">
+      <button pButton pRipple type="button" label="ALTERAR CONTRIBUIÇÃO" class="p-button-success button-alterar"> </button>
+    </div>
+  </div>
 </p-panel>

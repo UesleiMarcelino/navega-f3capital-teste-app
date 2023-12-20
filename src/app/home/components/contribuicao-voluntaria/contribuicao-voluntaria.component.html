@@ -1,1 +1,22 @@
-<p>contribuicao-voluntaria works!</p>
+<p-panel [style]="{ width: '750px' }">
+  <ng-template pTemplate="header">
+    <div class="flex align-items-center gap-2">
+      <img alt=" icon" src="/assets/icons/currency.png">
+      <span class="font-medium">Contribuição Mensal</span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="icons">
+    <span class="pi pi-angle-right icon-menu"></span>
+  </ng-template>
+  <div class="grid">
+    <div class="col-12">
+      <span class="font-medium">Valor da contribuição</span>
+      <span class="font-bold col-offset-7">R$ 500,00</span>
+    </div>
+    <div class="col-12">
+      <button pButton pRipple type="button" label="ALTERAR CONTRIBUIÇÃO" class="p-button-success button-alterar"> </button>
+    </div>
+  </div>
+</p-panel>
+
+
