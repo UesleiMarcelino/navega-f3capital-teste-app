@@ -7,7 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContentModule } from './home/content/content.module';
-import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask } from 'ngx-mask';
+import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask, provideNgxMask } from 'ngx-mask';
 
 
 @NgModule({
@@ -21,11 +21,10 @@ import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask } from 'ngx-ma
     AppRoutingModule,
     SharedModule,
     ContentModule,
-    NgxMaskDirective,
-    NgxMaskPipe
+   
     
   ],
-  providers: [provideEnvironmentNgxMask()],
+  providers: [provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

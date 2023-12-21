@@ -10,7 +10,7 @@
         <span class="font-medium">Contribuição mensal</span>
       </span>
     </div>
-    <div class="flex align-items-center font-bold text-900" style="line-height: 0;">R$ {{this.numMonth }}</div>
+    <div class="flex align-items-center font-bold text-900" style="line-height: 0;">R$ {{this.numMonth | mask: 'separator.2' }}</div>
   </div>
 </div>
 <div class="col-9 text-center">
@@ -21,6 +21,6 @@
         <span class="font-medium">Contribuição voluntária</span>
       </span>
     </div>
-    <div class="flex align-items-center font-bold text-900" style="line-height: 0;">R$ {{this.numVolunt }}</div>
+    <div class="flex align-items-center font-bold text-900" style="line-height: 0;">R$ {{this.numVolunt | mask: 'separator.2' }}</div>
   </div>
 </div>

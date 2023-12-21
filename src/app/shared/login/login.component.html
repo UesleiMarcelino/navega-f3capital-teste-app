@@ -43,7 +43,7 @@
             <span class="w-6 p-input-icon-right">
               <span class="flex justify-content-start flex-wrap" for="firstname1">Email ou CPF</span>
               <i class="pi pi-check-circle"></i>
-              <input pInputText id="firstname1" formControlName="login" type="text" class="text-base text-color w-full"
+              <input pInputText id="firstname1" formControlName="login" type="text"  class="text-base text-color w-full"
                 [ngClass]="{
                   hasError:
                     submitted && formLogin.get('login')?.hasError('required')
@@ -62,7 +62,7 @@
                   'pi-eye-slash': !fieldTextType,
                   'pi-eye': fieldTextType
                 }" (click)="toggleFieldTextType()"></i>
-              <input id="firstname1" formControlName="senha" [type]="fieldTextType ? 'text' : 'password'"
+              <input id="firstname1" formControlName="senha"  [type]="fieldTextType ? 'text' : 'password'"
                 class="text-base text-color w-full" [ngClass]="{
                   hasError:
                     submitted && formLogin.get('senha')?.hasError('required')

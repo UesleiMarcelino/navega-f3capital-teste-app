@@ -15,6 +15,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { MessagesModule } from 'primeng/messages';
 import { PasswordModule } from 'primeng/password';
 import { PanelModule } from 'primeng/panel';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 
 
@@ -35,7 +36,9 @@ import { PanelModule } from 'primeng/panel';
     DropdownModule,
     MessagesModule,
     PasswordModule,
-    PanelModule
+    PanelModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
   exports: [
     HeaderComponent,
@@ -43,5 +46,6 @@ import { PanelModule } from 'primeng/panel';
     SubheaderMenuComponent,
     SidenavMenuComponent,
   ],
+  providers: [provideNgxMask()]
 })
 export class SharedModule { }

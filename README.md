@@ -1,27 +1,43 @@
 # NavegaF3capitalTesteApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+Projeto criado em Angular 16(v16.2.10) e utilizando PrimeNg (v17.1.0). 
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para executar o projeto é recomendado instalar o Node na versão 18. Em seguida utilizar o comando `npm install` ou `npm install --force`caso algumas dependencias não seja instaladas corretamente. Utilize a linha de comando `ng build` e em seguida `ng serve` para inicializar o projeto, a porta utilizada é `http://localhost:4200/`. 
 
-## Code scaffolding
+## Sobre o desenvolvimento do Projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- O Projeto contem 2 telas (Login e Conteudo) com componentes reutilizaveis e responsivos.
+- Estilização utilizando CSS com pre processador Less.
+- Estruturação do projeto de acordo com as normas de boas praticas do Angular.
+- Testes unitarios utilizando o framework Jest.
 
-## Build
+## Tela Login
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- A tela possui campos de insercao de dados para login, utilizando Email ou CPF
+- Validacao  para caso o usuario não preencha os campos e tentar acessar, uma mensagem abaixo dos campos indicara preenchimento obrigatorio dos campos
+- Validacao caso o Email/ CPF e senha estejam incorretos nao permitindo o usuario avancar para a tela posterior e exibira uma mensagem de alerta
+
+Dados Mock para login:
+```
+  email: test@example.com,
+  cpf: 12345678910,
+  senha:navega123
+```
+## Tela Conteúdo
+
+- Contem um menu lateral com opçoes de acordo com prototipo
+- Grafico apresentando numeros randomicos a cada interacao ou atualização da tela, assim mostrando como seria um grafico recebendo dados em tempo real
+- Os mesmos numeros randomicos são exibidos como valores em Contribuição Mensal e Contribuição Voluntaria
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Use o `npm run test` para executar os teste via Jest.
 
-## Running end-to-end tests
+## Notas do desenvolvedor
+- Algumas partes dos componentes pode demonstrar outro comportamento ao utilizar em dispositivos menores. Ë a primeira vez que trabalho com responsividade nesse framework e não tive tempo habil para entender melhor como funciona a Responsividade (CSS Grid e Flexbox) e estudar a documentacao. É um pouco diferente do que estou acostumado a ver e trabalhar, porem pude entender que no PrimeNG é comum e demonstrado em exemplos misturar o CSS Grid e Flexbox no HTML do componente. Achei interessante essa solucao para criar Grid's nas telas e eliminar os break-points e trabalhar com excalas fixas.
+- A maior parte de testes unitarios foi feito no `login.componenent.ts` pois o mesmo recebeu mais logica e funcionalidades para demonstrar em Mock o comportamente real de um acesso.
+- Tomei a liberdade de utilziar o `Math.random()` no componente `chart.componenent.ts` para demonstrar numeros reais e o funcionamento do grafico. O Grafico utiliza o Charts.js como extensão do PrimeNG
+- Alguns componentes foram customizados, para que sua estilizacao fosse efetiva em alguns momentos utilizei o `::ng:deep`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

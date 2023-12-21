@@ -9,6 +9,7 @@ import { ChartModule } from 'primeng/chart';
 import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
 import { ButtonAddContribuicaoComponent } from '../components/button-add-contribuicao/button-add-contribuicao.component';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 
 
@@ -25,13 +26,16 @@ import { ButtonAddContribuicaoComponent } from '../components/button-add-contrib
     RouterModule,
     ChartModule,
     PanelModule,
-    ButtonModule
+    ButtonModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
   exports: [
     ChartsComponent,
     ContribuicaoMensalComponent,
     ContribuicaoVoluntariaComponent,
     ButtonAddContribuicaoComponent
-  ]
+  ],
+  providers: [provideNgxMask()]
 })
 export class ContentModule { }

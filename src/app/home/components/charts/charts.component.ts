@@ -29,8 +29,4 @@ numVolunt: any
     }
   }
 
-  generateNumberMonth() {
-   
-  }
-
 }

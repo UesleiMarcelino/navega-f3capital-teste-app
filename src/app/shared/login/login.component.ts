@@ -22,11 +22,6 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.criarForm()
-  }
-
-
-  criarForm() {
     this.formLogin = this.fb.group({
       login: ['', Validators.required],
       senha: ['', Validators.required]
@@ -34,7 +29,10 @@ export class LoginComponent implements OnInit {
   }
 
   logar() {
-    if (this.formLogin.valid) {
+    if (!this.formLogin.valid) {
+       this.submitted = true;
+    } else {
+
       let login = this.formLogin.get('login')?.value
       let senha = this.formLogin.get('senha')?.value
       
@@ -43,11 +41,9 @@ export class LoginComponent implements OnInit {
       } else {
         this.addMessages()
       }
-    } else {
-      this.submitted = true;
     }
 
-  }
+    }
 
   addMessages() {
     this.msgs2 = [
@@ -58,7 +54,6 @@ export class LoginComponent implements OnInit {
   toggleFieldTextType() {
     this.fieldTextType = !this.fieldTextType;
   }
-
 
 
 }
